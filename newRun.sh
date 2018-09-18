@@ -20,7 +20,7 @@ else
 fi
 
 ## Linking libraries rather than copying them
-linkFiles=`ls -ld ~/Manoj/gradingScripts_373/newLib_Jupiter/* | awk '{print $9}'`
+linkFiles=`ls -ld ~/Manoj/ECE373/Fall_2018/gradingScripts_373/newLib_Jupiter/* | awk '{print $9}'`
 ## You need to be in lib directory before you execute this loop
 ## Junit5 is superset of JUnit4 libraries. So no need to have separate loop for JUnit5
 ## Just link all the libraries
@@ -40,7 +40,8 @@ if [ -e lib ]; then
 		-a -e lib/junit-platform-commons-1.1.0-20180218.190954-382.jar -a -e lib/junit-platform-engine-1.1.0-20180218.190958-381.jar \
 		-a -e lib/junit-platform-launcher-1.1.0-20180218.191059-380.jar -a -e lib/junit-platform-runner-1.1.0-20180218.191100-380.jar \
 		-a -e lib/junit-platform-suite-api-1.1.0-20180218.191102-380.jar -a -e lib/junit-vintage-engine-5.1.0-20180218.191104-236.jar \
-		-a -e lib/opentest4j-1.0.0-20170730.202628-48.jar -a -e lib/apiguardian-api-1.0.0-20170909.133433-2.jar ]; then
+		-a -e lib/opentest4j-1.0.0-20170730.202628-48.jar -a -e lib/apiguardian-api-1.0.0-20170909.133433-2.jar \
+		-a -e lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar ]; then
     echo "Junit is linked in lib directory"
   else
     cd lib
@@ -81,5 +82,48 @@ echo "javac -d bin -cp bin:lib/* $testFile"
 javac -d bin -cp bin:lib/* $testFile
 
 ## Running the JUnit test
-echo "java -cp bin:lib/* org.junit.runner.JUnitCore $testClass"
-java -cp bin:lib/* org.junit.runner.JUnitCore $testClass
+#echo "java -cp bin:lib/* org.junit.runner.JUnitCore $testClass"
+## JUnit 4 test case run
+#java -cp bin:lib/* org.junit.runner.JUnitCore $testClass
+
+## JUnit 5 testcase run
+## java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c university.debug.CourseTest
+#echo "java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c $testClass"
+#java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c $testClass
+
+
+## Testing for JUnit libraries, since testing commands are different for Junt5 and Junit4
+j5=`less .classpath | egrep JUNIT | egrep 5`
+j4=`less .classpath | egrep JUNIT | egrep 4`
+j3=`less .classpath | egrep JUNIT | egrep 3`
+
+## "" are required.
+## https://stackoverflow.com/questions/3869072/test-for-non-zero-length-string-in-bash-n-var-or-var
+
+#if [ -z "$j5" ]; then
+#	echo "JUnit5 not present in file"
+#else
+#	echo "JUnit5 present"
+#fi
+#
+#if [ -z "$j4" ]; then
+#	echo "JUNIT4 not present"
+#else 
+#	echo "JUNit4 present"
+#fi
+
+## -n tests if the variable is non zero in length
+if [ -n "$j5" ]; then
+	echo "JUnit5 present"
+	echo "java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c $testClass"
+	java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c $testClass
+elif [ -n "$j4" ]; then
+	echo "JUnit4 present"
+	echo "java -cp bin:lib/* org.junit.runner.JUnitCore $testClass"
+	## JUnit 4 test case run
+	java -cp bin:lib/* org.junit.runner.JUnitCore $testClass
+elif [ -n "$j3" ]; then
+	echo "JUnit3 present"
+else 
+	echo "JUnit5, Junit4 and Junit3 missing"
+fi
