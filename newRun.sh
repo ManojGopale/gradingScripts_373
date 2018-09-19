@@ -1,13 +1,14 @@
-testFile=`find . | egrep test | egrep java | sed "s/\.\///g"`
+testFile=`find . | egrep Test | egrep -v bin |  sed "s/\.\///g"`
 echo $testFile
 
 ## rev reverses the string and we use cut to get from 2nd delimiter and then again reverse it.
 ## This removes .java from the variable
-testClass=`find . | egrep test | egrep java | sed "s/\.\///g" | sed "s/\//\./g" | rev | cut -d "." -f2-9 | rev | cut -d "." -f2-9`
+testClass=`find . | egrep Test | egrep -v bin | sed "s/\.\///g" | sed "s/\//\./g" | rev | cut -d "." -f2-9 | rev | cut -d "." -f2-9`
 echo $testClass
+echo ""
 
 ## srcFile will have all the .java files, which can be compiled at once
-srcFile=`find . | egrep src | egrep java | sed "s/\.\///g"`
+srcFile=`find . | egrep src | egrep java | egrep -v Test | sed "s/\.\///g"`
 
 ## Checking for bin in the directory
 ## There should be space after '[' and before ']' in the if statement
@@ -31,6 +32,7 @@ linkFiles=`ls -ld ~/Manoj/ECE373/Fall_2018/gradingScripts_373/newLib_Jupiter/* |
 #done
 
 
+echo ""
 if [ -e lib ]; then
   echo "Directory lib exists in ${PWD}"
 	## If lib is present and any of the libraries are not linked then re-link everything
@@ -74,10 +76,12 @@ fi
 
 ## Create soft links in the lib directory
 
+echo ""
 ## Compiling Person and PersonTest
 echo "javac -d bin -cp src $srcFile"
 javac -d bin -cp src $srcFile
 
+echo ""
 echo "javac -d bin -cp bin:lib/* $testFile"
 javac -d bin -cp bin:lib/* $testFile
 
@@ -112,16 +116,21 @@ j3=`less .classpath | egrep JUNIT | egrep 3`
 #	echo "JUNit4 present"
 #fi
 
+echo ""
 ## -n tests if the variable is non zero in length
 if [ -n "$j5" ]; then
 	echo "JUnit5 present"
 	echo "java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c $testClass"
-	java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c $testClass
+	j5Cmd="java -jar lib/junit-platform-console-standalone-1.3.0-20180903.154750-256.jar -cp bin:lib/* -c $testClass"
+	echo "j5Cmd = $j5Cmd"
+	eval "$j5Cmd"
 elif [ -n "$j4" ]; then
 	echo "JUnit4 present"
 	echo "java -cp bin:lib/* org.junit.runner.JUnitCore $testClass"
 	## JUnit 4 test case run
-	java -cp bin:lib/* org.junit.runner.JUnitCore $testClass
+	j4Cmd="java -cp bin:lib/* org.junit.runner.JUnitCore $testClass"
+	echo "J4 Cmd = $j4Cmd"
+	eval "$j4Cmd"
 elif [ -n "$j3" ]; then
 	echo "JUnit3 present"
 else 
