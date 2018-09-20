@@ -1,14 +1,14 @@
-testFile=`find . | egrep Test | egrep -v bin |  sed "s/\.\///g"`
+testFile=`find . -type f | egrep CourseTest | egrep -v bin |  sed "s/\.\///g"`
 echo $testFile
 
 ## rev reverses the string and we use cut to get from 2nd delimiter and then again reverse it.
 ## This removes .java from the variable
-testClass=`find . | egrep Test | egrep -v bin | sed "s/\.\///g" | sed "s/\//\./g" | rev | cut -d "." -f2-9 | rev | cut -d "." -f2-9`
+testClass=`find . -type f | egrep CourseTest | egrep -v bin | sed "s/\.\///g" | sed "s/\//\./g" | rev | cut -d "." -f2-9 | rev | cut -d "." -f2-9`
 echo $testClass
 echo ""
 
 ## srcFile will have all the .java files, which can be compiled at once
-srcFile=`find . | egrep src | egrep java | egrep -v Test | sed "s/\.\///g"`
+srcFile=`find . -type f | egrep src | egrep java | egrep -v CourseTest | sed "s/\.\///g"`
 
 ## Checking for bin in the directory
 ## There should be space after '[' and before ']' in the if statement
