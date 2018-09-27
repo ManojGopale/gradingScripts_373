@@ -5,5 +5,5 @@
 javac -d bin -cp . src/org/university/*/*.java
 
 ## Running all the drivers
-java -cp bin org.university.software.Driver1
-java -cp bin org.university.software.Driver2
+java -cp bin org.university.software.driver1_orig
+java -cp bin org.university.software.driver2_orig
