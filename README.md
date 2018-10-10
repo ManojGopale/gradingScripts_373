@@ -1,3 +1,6 @@
+## To pull the repo
+git pull -v
+
 # gradingScripts_373
 Use newRun.sh in the root directory (parallel to src and test] in the assignments.
 It will create bin and lib (link's junitXX.jar and hancrestXX.jar).
