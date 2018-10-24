@@ -1,0 +1,7 @@
+public class Book {
+public abstract class Employee extends Person {
+public class Library {
+public abstract class Person {
+public class Professor extends Employee {
+public class Student extends Person {
+public class University {

@@ -1,0 +1,359 @@
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Merems
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+4c4
+< public abstract class Person {
+---
+> public class Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Miner
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public abstract class Employee {
+5,6c5,6
+< public class Professor extends Employee {
+< public class Student extends Person {
+---
+> public class Professor {
+> public class Student {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Perez
+#############################
+
+2d1
+< public abstract class Employee extends Person {
+5c4
+< public class Professor extends Employee {
+---
+> public class Professor extends Employeee {
+7d5
+< public class University {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Qiu
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+4c4
+< public abstract class Person {
+---
+> public class Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Quintana
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Quintana/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Tasir
+#############################
+
+2,7d1
+< public abstract class Employee extends Person {
+< public class Library {
+< public abstract class Person {
+< public class Professor extends Employee {
+< public class Student extends Person {
+< public class University {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Thurston
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Wong
+#############################
+
+3c3
+< public class Library {
+---
+> public class Library extends University {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Wu
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab2_M2T_Wu/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Jeragh
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Jeragh/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Jones
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Jones/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Lacey
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+5d4
+< public class Professor extends Employee {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Lubbers
+#############################
+
+1,7d0
+< public class Book {
+< public abstract class Employee extends Person {
+< public class Library {
+< public abstract class Person {
+< public class Professor extends Employee {
+< public class Student extends Person {
+< public class University {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Mambo
+#############################
+
+3c3
+< public class Library {
+---
+> public abstract class Library {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Mcallister
+#############################
+
+1c1
+< public class Book {
+---
+> public class Book extends Library {
+3,5c3,5
+< public class Library {
+< public abstract class Person {
+< public class Professor extends Employee {
+---
+> public class Library extends University {
+> public abstract class Person extends Library {
+> public class Professor extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_McIntosh
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_McMullen
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_McMullen/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_m2t_Musick
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public abstract class Employee extends Person extends Person {
+5,6c5,6
+< public class Professor extends Employee {
+< public class Student extends Person {
+---
+> public class Professor extends Employee extends Employee {
+> public class Student extends Person extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Najdawi
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Najdawi/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Nguyen
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Ogden
+#############################
+
+5,6d4
+< public class Professor extends Employee {
+< public class Student extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Rockowitz
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Sheah
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Sheah/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Silverio
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Silverio/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Sisson
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Sisson/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Skow
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./lab3_M2T_Sofka
+#############################
+
+5,6c5,6
+< public class Professor extends Employee {
+< public class Student extends Person {
+---
+> public abstract class Professor extends Employee {
+> public abstract class Student extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Spinali
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public abstract class Employee {
+5d4
+< public class Professor extends Employee {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2t_Stefanko
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public abstract class Employee {
+5,6c5,6
+< public class Professor extends Employee {
+< public class Student extends Person {
+---
+> public class Professor {
+> public class Student {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Stoltz
+#############################
+
+7c7
+< public class University {
+---
+> public abstract class University {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Turchik
+#############################
+
+1,7d0
+< public class Book {
+< public abstract class Employee extends Person {
+< public class Library {
+< public abstract class Person {
+< public class Professor extends Employee {
+< public class Student extends Person {
+< public class University {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_ulanday
+#############################
+
+2c2
+< public abstract class Employee extends Person {
+---
+> public class Employee extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M2T_Wright
+#############################
+
+6d5
+< public class Student extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./lab3_M2T_Zhang
+#############################
+
+5c5
+< public class Professor extends Employee {
+---
+> public abstract class Professor extends Employee {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M3T_Yang
+#############################
+
+Files /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/Lab3_output_onlyClass.txt and /Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab3_M3T_Yang/Lab3_student_onlyClass.txt are identical
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab4_M2T_Salanski
+#############################
+
+6c6
+< public class Student extends Person {
+---
+> public abstract class Student extends Person {
+
+#############################
+/Users/ual-laptop/Downloads/Lab3_Download/uniqueSubmissions/submission_unzipped/submission_M2T/./Lab4_M2T_Vijay
+#############################
+
+1,7d0
+< public class Book {
+< public abstract class Employee extends Person {
+< public class Library {
+< public abstract class Person {
+< public class Professor extends Employee {
+< public class Student extends Person {
+< public class University {
+

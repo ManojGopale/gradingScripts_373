@@ -1,0 +1,38 @@
+public class Book {
+	private String title;
+	private String author;
+	private Person person;
+	public String getTitle() {
+	public String getAuthor() {
+	public Person getPerson() {
+	public void setTitle(String title) {
+	public void setAuthor(String author) {
+	public void setPerson(Person person) {
+	public boolean isAvailable( ) {
+	public String toString( ) {
+public abstract class Employee extends Person {
+	private int ID;
+	public int getID() {
+	public void setID(int ID) {
+	public void borrowBokk(Book b1  ) {
+	public void returnBook(Book b1  ) {
+public class Library {
+	private ArrayList<Book> books;
+	public ArrayList<Book> getBooks() {
+	public void setBooks(ArrayList<Book> books) {
+	public Book findBook(String Title  ) {
+public abstract class Person {
+	private String name;
+	protected int maxBooks;
+	public String getName() {
+	public int getMaxBooks() {
+	public void setName(String name) {
+	public void setMaxBooks(int maxBooks) {
+	public abstract void borrowBook( Book b1 );
+	public abstract void returnBook(Book b1  );
+public class Professor extends Employee {
+public class Student extends Person {
+public class University {
+	private ArrayList<Library> libraries;
+	public ArrayList<Library> getLibraries() {
+	public void setLibraries(ArrayList<Library> libraries) {
