@@ -43,17 +43,97 @@
 
 ##### Asignment 3 ########
 
-## Copy original drivers as Driver1_orig.java, Driver2_orig.java and Driver3.java to software folder
+##M## Copy original drivers as Driver1_orig.java, Driver2_orig.java and Driver3.java to software folder
+##MparentDir="/Users/ual-laptop/Downloads/Assignment3_download/uniqueSubmission"
+##M
+##M## removing the diff file for next run
+##MdiffFile="$parentDir/Assignment3_diff.txt"
+##Mif [ -e "$diffFile" ]; then
+##M	\rm -rf $diffFile
+##M	touch $diffFile
+##Melse 
+##M	touch $diffFile
+##Mfi
+##M
+##M## type d is to only find directories
+##M#subFile=`find $parentDir/testScript/. -depth 1 -type d` 
+##MsubFile=`find $parentDir/submission_unzipped/. -depth 1 -type d` 
+##M
+##Mfor studentFolder in $subFile;
+##Mdo
+##M  ## resultFile is storing the output from the Drivers
+##M  ## We will be comparing it with the Original Driver from our runs and storing
+##M  ## the diff results in diffFile
+##M
+##M  resultFile="$studentFolder/outputDrivers.txt"
+##M  ## Removing resultFile if already present
+##M  if [ -e "$resultFile" ]; then
+##M  	\rm -rf $resultFile
+##M  	touch $resultFile
+##M  else 
+##M  	touch $resultFile
+##M  fi
+##M
+##M  cdCmd="cd $studentFolder"
+##M  eval "$cdCmd"
+##M
+##M  echo "#############################"
+##M  echo "$studentFolder"
+##M  echo "#############################"
+##M  echo ""
+##M
+##M  echo "Copying Original Drivers to software packages" >> $resultFile
+##M  echo "" >> $resultFile
+##M  copyCmd="cp -rf ~/Manoj/ECE373/Assignment3_drivers/Driver[1-3]*.java ./src/org/university/software/."
+##M  eval "$copyCmd"
+##M  
+##M  ## Compiling all the drivers
+##M  echo "Compiling all the classes" >> $resultFile
+##M  echo "" >> $resultFile
+##M  javac -d bin -cp . src/org/university/*/*.java
+##M  
+##M  ## Running all the drivers
+##M  echo "##############################" >> $resultFile
+##M  echo "Driver1 output" >> $resultFile
+##M  echo "" >> $resultFile
+##M  java -cp bin org.university.software.Driver1_orig >> $resultFile
+##M  echo "" >> $resultFile
+##M  echo "##############################" >> $resultFile
+##M  echo "" >> $resultFile
+##M  
+##M  echo "Driver2 output" >> $resultFile
+##M  echo "" >> $resultFile
+##M  java -cp bin org.university.software.Driver2_orig >> $resultFile
+##M  echo "" >> $resultFile
+##M  echo "##############################" >> $resultFile
+##M  echo "" >> $resultFile
+##M  
+##M  echo "Driver3 output" >> $resultFile
+##M  echo "" >> $resultFile
+##M  java -cp bin org.university.software.Driver3_orig >> $resultFile
+##M
+##M  ## Writing diff of original output and submission driver output in diffFile
+##M  echo "#############################" >> $diffFile
+##M  echo "$studentFolder" >> $diffFile
+##M  echo "#############################" >> $diffFile
+##M  echo "" >> $diffFile
+##M
+##M  diffCmd="diff -ws $parentDir/outputDrivers_original.txt $studentFolder/outputDrivers.txt"
+##M  eval "$diffCmd" >> $diffFile
+##M  echo "" >> $diffFile
+##M
+##M  cdParent="cd $parentDir/submission_unzipped"
+##M  eval "$cdParent"
+##Mdone
+
+## Extra credit
+## Remove Driver1-3.java from the folders.
+## Whoever compiles will pass without errors, easy to grade
+## Only copy Driver_extra.java and compile
+
 parentDir="/Users/ual-laptop/Downloads/Assignment3_download/uniqueSubmission"
 
-## removing the diff file for next run
-diffFile="$parentDir/Assignment3_diff.txt"
-if [ -e "$diffFile" ]; then
-	\rm -rf $diffFile
-	touch $diffFile
-else 
-	touch $diffFile
-fi
+subFile=`find $parentDir/submission_unzipped/. -depth 1 -type d` 
 
 ## removing the diff file for next run
 diffFileExtra="$parentDir/Assignment3_diffExtra.txt"
@@ -64,24 +144,12 @@ else
 	touch $diffFileExtra
 fi
 
-## type d is to only find directories
-#subFile=`find $parentDir/testScript/. -depth 1 -type d` 
-subFile=`find $parentDir/submission_unzipped/. -depth 1 -type d` 
 
 for studentFolder in $subFile;
 do
   ## resultFile is storing the output from the Drivers
   ## We will be comparing it with the Original Driver from our runs and storing
   ## the diff results in diffFile
-
-  resultFile="$studentFolder/outputDrivers.txt"
-  ## Removing resultFile if already present
-  if [ -e "$resultFile" ]; then
-  	\rm -rf $resultFile
-  	touch $resultFile
-  else 
-  	touch $resultFile
-  fi
 
 	resultFileExtra="$studentFolder/outputDrivers_extraCredit.txt"
   ## Removing resultFileExtra if already present
@@ -100,59 +168,30 @@ do
   echo "#############################"
   echo ""
 
-  echo "Copying Original Drivers to software packages" >> $resultFile
-  echo "" >> $resultFile
-  copyCmd="cp -rf ~/Manoj/ECE373/Assignment3_drivers/Driver* ./src/org/university/software/."
+  #echo "Copying Original Drivers to software packages" >> $resultFile
+  #echo "" >> $resultFile
+  copyCmd="cp -rf ~/Manoj/ECE373/Assignment3_drivers/Driver_extra.java ./src/org/university/software/."
   eval "$copyCmd"
   
   ## Compiling all the drivers
-  echo "Compiling all the classes" >> $resultFile
-  echo "" >> $resultFile
+  #echo "Compiling all the classes" >> $resultFile
+  #echo "" >> $resultFile
   javac -d bin -cp . src/org/university/*/*.java
   
-  ## Running all the drivers
-  echo "##############################" >> $resultFile
-  echo "Driver1 output" >> $resultFile
-  echo "" >> $resultFile
-  java -cp bin org.university.software.Driver1_orig >> $resultFile
-  echo "" >> $resultFile
-  echo "##############################" >> $resultFile
-  echo "" >> $resultFile
-  
-  echo "Driver2 output" >> $resultFile
-  echo "" >> $resultFile
-  java -cp bin org.university.software.Driver2_orig >> $resultFile
-  echo "" >> $resultFile
-  echo "##############################" >> $resultFile
-  echo "" >> $resultFile
-  
-  echo "Driver3 output" >> $resultFile
-  echo "" >> $resultFile
-  java -cp bin org.university.software.Driver3_orig >> $resultFile
+  ## Running extra credit driver
+	echo "Driver_extra credit output" >> $resultFileExtra
+	echo "" >> $resultFileExtra
+	java -cp bin org.university.software.Driver_extra >> $resultFileExtra
 
-	##Mecho "Driver_extra credit output" >> $resultFileExtra
-	##Mecho "" >> $resultFileExtra
-	##Mjava -cp bin org.university.software.Driver_extra >> $resultFileExtra
+  ## Writing diff of extra credit original output and submission driver output in diffFile
+  echo "#############################" >> $diffFileExtra
+  echo "$studentFolder" >> $diffFileExtra
+  echo "#############################" >> $diffFileExtra
+  echo "" >> $diffFileExtra
 
-  ## Writing diff of original output and submission driver output in diffFile
-  echo "#############################" >> $diffFile
-  echo "$studentFolder" >> $diffFile
-  echo "#############################" >> $diffFile
-  echo "" >> $diffFile
-
-  diffCmd="diff -ws $parentDir/outputDrivers_original.txt $studentFolder/outputDrivers.txt"
-  eval "$diffCmd" >> $diffFile
-  echo "" >> $diffFile
-
-  ##M## Writing diff of extra credit original output and submission driver output in diffFile
-  ##Mecho "#############################" >> $diffFileExtra
-  ##Mecho "$studentFolder" >> $diffFileExtra
-  ##Mecho "#############################" >> $diffFileExtra
-  ##Mecho "" >> $diffFileExtra
-
-  ##MdiffCmd="diff -ws $parentDir/outputDrivers_extraCredit_original.txt $studentFolder/outputDrivers_extraCredit.txt"
-  ##Meval "$diffCmd" >> $diffFileExtra
-  ##Mecho "" >> $diffFileExtra
+  diffCmd="diff -ws $parentDir/outputDrivers_extraCredit_original.txt $studentFolder/outputDrivers_extraCredit.txt"
+  eval "$diffCmd" >> $diffFileExtra
+  echo "" >> $diffFileExtra
 
   cdParent="cd $parentDir/submission_unzipped"
   eval "$cdParent"
