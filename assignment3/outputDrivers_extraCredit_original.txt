@@ -1,0 +1,147 @@
+Driver_extra credit output
+
+Testing addCourse method when Campus Course has enough students  ...
+Daz can't add Campus Course CS387 Enterprise Web Applications. Because this Campus course has enough student.
+
+Testing availableTo method in CampusCourse when Campus Course has enough students  ...
+Does this Campus Course available for more student to add? True or false:
+false
+
+Testing Professor Conflicts  ...
+The professor Tharp cannot be assigned to this campus course because professor Kececioglu is already assigned to the course Enterprise Web Applications.
+The professor Kececioglu cannot be assigned to this campus course because professor Homer is already assigned to the course Discrete Structures.
+The professor cannot be assigned to this online course because professsor Regan is already assigned to the online course Online_Course_1.
+
+Testing dropCourse method in Student class ...
+The course ECE373 could not be dropped because Lahiru is not enrolled in ECE373.
+
+Testing dropCourse method if campus course won't have at least 6 credts to stay enroll in online courses in Student class ...
+Lahiru can't drop this CampusCourse, because student don't has enough campus course credit to hold online course
+
+Testing addCourse method in Student class ...
+Student Lahiru has only 4 on campus credits enrolled. Should have at least 6 credits registered before registering online courses.
+Lahiru can't add online Course ECE620 Online_Course_2. Because this student don't have enough Campus course credit.
+
+Testing dropCourse method in Student class ...
+The course CS630 could not be dropped because Lahiru is not enrolled in CS630.
+The course ECE610 could not be dropped because Ben is not enrolled in ECE610.
+
+Conflicts:
+
+Test conflicts of classroom schedule:
+ECE107 conflicts with ECE320. Conflicting time slot Mon 9:30am to 10:45am. ECE107 course cannot be added to Harvill 101's Schedule.
+
+Test conflicts of professor schedule:
+ECE107 course cannot be added to Tharp's Schedule. ECE107 conflicts with ECE320. Conflicting time slot is Mon 9:30am to 10:45am.
+ECE275 course cannot be added to Homer's Schedule. ECE275 conflicts with CS345. Conflicting time slot is Wed 11:00am to 12:15pm.
+ECE275 course cannot be added to Homer's Schedule. ECE275 conflicts with CS345. Conflicting time slot is Fri 11:00am to 12:15pm.
+
+test Conflicts when add course to student:
+ECE320 course cannot be added to Lahiru's Schedule. ECE320 conflicts with CS426. Conflicting time slot is Mon 9:30am to 10:45am.
+ECE320 course cannot be added to Lahiru's Schedule. ECE320 conflicts with CS426. Conflicting time slot is Wed 9:30am to 10:45am.
+ECE373 course cannot be added to Lahiru's Schedule. ECE373 conflicts with CS387. Conflicting time slot is Tue 8:00am to 9:15am.
+ECE373 course cannot be added to Lahiru's Schedule. ECE373 conflicts with CS387. Conflicting time slot is Thu 8:00am to 9:15am.
+ECE275 course cannot be added to Daz's Schedule. ECE275 conflicts with CS345. Conflicting time slot is Wed 11:00am to 12:15pm.
+ECE275 course cannot be added to Daz's Schedule. ECE275 conflicts with CS345. Conflicting time slot is Fri 11:00am to 12:15pm.
+
+test Conflicts when add course to staff:
+CS387 is removed from Carol's schedule(Staff can only take one class at a time). CS372 has been added to Carol's Schedule.
+CS372 is removed from Carol's schedule(Staff can only take one class at a time). CS630 has been added to Carol's Schedule.
+CS630 is removed from Carol's schedule(Staff can only take one class at a time). CS640 has been added to Carol's Schedule.
+
+The schedule for Prof. Tharp:
+Mon 9:30am to 10:45am ECE320 Circuits Analysis
+Wed 9:30am to 10:45am ECE320 Circuits Analysis
+
+The schedule for Prof. Kececioglu:
+Tue 8:00am to 9:15am CS387 Enterprise Web Applications
+Tue 9:30am to 10:45am CS372 Comparative Programming Languages
+Thu 8:00am to 9:15am CS387 Enterprise Web Applications
+Thu 9:30am to 10:45am CS372 Comparative Programming Languages
+630 Online_Course_3
+
+The schedule for Prof. Homer:
+Mon 9:30am to 10:45am CS426 Computer Networks
+Wed 9:30am to 10:45am CS426 Computer Networks
+Wed 11:00am to 12:15pm CS345 Discrete Structures
+Fri 11:00am to 12:15pm CS345 Discrete Structures
+640 Online_Course_4
+
+The schedule for Harvill 101:
+Mon 9:30am to 10:45am ECE320 Circuits Analysis
+Wed 9:30am to 10:45am ECE320 Circuits Analysis
+
+The schedule for Harvill 203:
+Tue 8:00am to 9:15am CS387 Enterprise Web Applications
+Thu 8:00am to 9:15am CS387 Enterprise Web Applications
+
+The schedule for Gould Simpson 102:
+Mon 9:30am to 10:45am CS426 Computer Networks
+Wed 9:30am to 10:45am CS426 Computer Networks
+Wed 11:00am to 12:15pm CS345 Discrete Structures
+Fri 11:00am to 12:15pm CS345 Discrete Structures
+
+The schedule for Gould Simpson 105:
+Tue 9:30am to 10:45am CS372 Comparative Programming Languages
+Thu 9:30am to 10:45am CS372 Comparative Programming Languages
+
+The schedule for Student Lahiru:
+Mon 9:30am to 10:45am CS426 Computer Networks
+Tue 8:00am to 9:15am CS387 Enterprise Web Applications
+Wed 9:30am to 10:45am CS426 Computer Networks
+Thu 8:00am to 9:15am CS387 Enterprise Web Applications
+610 Online_Course_1
+
+The schedule for Student Ben:
+Mon 9:30am to 10:45am CS426 Computer Networks
+Tue 8:00am to 9:15am CS387 Enterprise Web Applications
+Tue 9:30am to 10:45am CS372 Comparative Programming Languages
+Wed 9:30am to 10:45am CS426 Computer Networks
+Wed 11:00am to 12:15pm CS345 Discrete Structures
+Thu 8:00am to 9:15am CS387 Enterprise Web Applications
+Thu 9:30am to 10:45am CS372 Comparative Programming Languages
+Fri 11:00am to 12:15pm CS345 Discrete Structures
+630 Online_Course_3
+
+The schedule for Student Jerry:
+Mon 9:30am to 10:45am ECE320 Circuits Analysis
+Tue 8:00am to 9:15am CS387 Enterprise Web Applications
+Tue 9:30am to 10:45am CS372 Comparative Programming Languages
+Wed 9:30am to 10:45am ECE320 Circuits Analysis
+Thu 8:00am to 9:15am CS387 Enterprise Web Applications
+Thu 9:30am to 10:45am CS372 Comparative Programming Languages
+640 Online_Course_4
+
+The schedule for Employee Carol:
+640 Online_Course_4
+
+Tuition Fee for student Lahiru is 4100
+Tuition Fee for student Ben is 6500
+Tuition Fee for student Jerry is 6000
+Tuition Fee for Employee  Carol is 3000
+
+The schedule for course Enterprise Web Applications:
+Tue 8:00am to 9:15am Harvill 203
+Thu 8:00am to 9:15am Harvill 203
+
+The course list for department ECE:
+ECE275 Computer Programming II
+ECE320 Circuits Analysis
+ECE373 Object Oriented Software Design
+ECE107 Experimental Course
+ECE610 Online_Course_1
+ECE620 Online_Course_2
+
+The list of courses in the university:
+ECE275 Computer Programming II
+ECE320 Circuits Analysis
+ECE373 Object Oriented Software Design
+ECE107 Experimental Course
+CS387 Enterprise Web Applications
+CS372 Comparative Programming Languages
+CS345 Discrete Structures
+CS426 Computer Networks
+ECE610 Online_Course_1
+ECE620 Online_Course_2
+CS630 Online_Course_3
+CS640 Online_Course_4
