@@ -7,7 +7,7 @@ resultFileExtra="$parentDir/outputDrivers_extraCredit.txt"
 
 echo "Copying Original Drivers to software packages" >> $resultFile
 echo "" >> $resultFile
-copyCmd="cp -rf ~/Manoj/ECE373/Assignment3_drivers/* ./src/org/university/software/."
+copyCmd="cp -rf ~/Manoj/ECE373/Assignment3_drivers/Driver[1-2]*.java ./src/org/university/software/."
 eval "$copyCmd"
 
 ## Compiling all the drivers
@@ -27,15 +27,15 @@ echo "" >> $resultFile
 echo "Driver2 output" >> $resultFile
 echo "" >> $resultFile
 java -cp bin org.university.software.Driver2_orig >> $resultFile
-echo "" >> $resultFile
-echo "##############################" >> $resultFile
-echo "" >> $resultFile
+#echo "" >> $resultFile
+#echo "##############################" >> $resultFile
+#echo "" >> $resultFile
+#
+#echo "Driver3 output" >> $resultFile
+#echo "" >> $resultFile
+#java -cp bin org.university.software.Driver3_orig >> $resultFile
 
-echo "Driver3 output" >> $resultFile
-echo "" >> $resultFile
-java -cp bin org.university.software.Driver3_orig >> $resultFile
-
-echo "Driver_extra credit output" >> $resultFileExtra
-echo "" >> $resultFileExtra
-java -cp bin org.university.software.Driver_extra >> $resultFileExtra
+##Mecho "Driver_extra credit output" >> $resultFileExtra
+##Mecho "" >> $resultFileExtra
+##Mjava -cp bin org.university.software.Driver_extra >> $resultFileExtra
 
